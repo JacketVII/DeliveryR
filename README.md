@@ -12,7 +12,8 @@ This product is a follower robot, capable of transporting weights up to 100 Kg i
 The robot functions in semi-autonomous mode, which requires an operator to be close by, and it will follow the operator (the user).
 It can also be controlled via phone app, or in pushing mode by showing an Acuro marker to the camera, and the robot will start moving in
 its direction.
-This robot is an autonomous robot that uses sensors from an android phone including the IMU (accelerometer, gyroscope, magnetometer), the GPS sensor. Aditionally odometry data from the hoverboard itself is used for localization. The android app fuses differ  
+This robot is an autonomous robot that uses sensor data from an android phone and a hoverboard fot localization. Using the GPS coordinates of the waypoint it travels there while avoiding obstacles
+ that uses sensors from an android phone including the IMU (accelerometer, gyroscope, magnetometer), the GPS sensor. Aditionally odometry data from the hoverboard itself is used for localization. The android app fuses differ  
 
 ## Algorithm
 _____  
