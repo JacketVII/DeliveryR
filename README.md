@@ -8,7 +8,7 @@ This project was developed as a senior design project by Electrical and Computer
 ## Introduction
 _____  
 
-This project is an on-campus delivery robot that is designed to ship packages of different sizes and weights between points within the KAU campus. It's autonomous robot that uses sensor data from an android phone and a hoverboard for localization. Using the GPS coordinates of the waypoint it can travel to to it's destination while avoiding obstacles. An app was also developed for users to select the destination of the package.
+This project is an on-campus delivery robot that is designed to ship packages of different sizes and weights between set stations within the KAU campus. It is an autonomous robot that uses sensor data from an android phone and a hoverboard for localization. Using the GPS coordinates of the waypoint it can travel to to it's destination while avoiding obstacles. An app was also developed for users to select the destination of the package.
 
 
 
