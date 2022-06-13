@@ -45,8 +45,8 @@ The figure below shows The steps for delivering a package using the mobile appli
 ____  
 - HoverboardLink_ESP8266.ino:
   - This is deployed to the ESP8266 which is connected to the Tx, Rx pins in the hoverboard's control board, to be able to get odometry data and send commands to the hoverboard
-  -https://github.com/EFeru/hoverboard-firmware-hack-FOC This firmware hack is required to be able to control the hoverboard.
-  HoverboardGNCApp.slx.
+  - This firmware hack is required to be able to control the hoverboard. https://github.com/EFeru/hoverboard-firmware-hack-FOC 
+- HoverboardGNCApp.slx.
   - This builds the phone app that takes the android sensors and fuses them with GPS/odometry.
   - Build using Simulink then use android studio to disable taking GPS readings from network and reduce the minimum distance for readings to 0 meters.
 - UserGui.zip
