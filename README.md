@@ -34,11 +34,14 @@ These operational instructions summarize the steps for using the product:
   <li>	The robot is now locked..</li>
   <li>	The robot will start navigating toward the selected destination.</li>
   <li>	When the robot arrives, it will be waiting for the user to unlock the hatch and take the shipment.</li>
-  
+</ol>
+
 The figure below shows The steps for delivering a package using the mobile application.
+</ol>
+
 ![The steps for delivering a package using the mobile application](Lock.png)
 
-## The code
+## Code
 ____  
 - HoverboardLink_ESP8266.ino:
   - This is deployed to the ESP8266 which is connected to the Tx, Rx pins in the hoverboard's control board, to be able to get odometry data and send commands to the hoverboard
@@ -53,8 +56,10 @@ ____
   - Main code containing obstacle avoidance and navigation algorithms. Also allows manual control using arrow keys. 
 
 ## The Team
-Muhannad Saeed Alghamdi	: Mhdghd2@gmail.com 
+Muhannad Saeed Alghamdi	: Mhdghd2@gmail.com
+
 Sulaiman Abdullah Abbas: Sulaiman_samonah@Hotmail.com 
+
 Wael Rabah Aldhaheri: WaAldhaheri@gmail.com
 
 ## Acknowledgement
