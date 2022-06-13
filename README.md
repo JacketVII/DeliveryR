@@ -2,7 +2,7 @@
 _____  
 
 This project was developed as a senior design project by Electrical and Computer Engineering students at KAU, Jeddah, KSA in Fall 2021.  
-![Alt text](followercart_inAction.png)
+![Alt text](Journey.png)
 
 
 ## Introduction
@@ -12,19 +12,25 @@ This product is a follower robot, capable of transporting weights up to 100 Kg i
 The robot functions in semi-autonomous mode, which requires an operator to be close by, and it will follow the operator (the user).
 It can also be controlled via phone app, or in pushing mode by showing an Acuro marker to the camera, and the robot will start moving in
 its direction.
-This robot is an autonomous robot that uses sensor data from an android phone and a hoverboard fot localization. Using the GPS coordinates of the waypoint it travels there while avoiding obstacles
- that uses sensors from an android phone including the IMU (accelerometer, gyroscope, magnetometer), the GPS sensor. Aditionally odometry data from the hoverboard itself is used for localization. The android app fuses differ  
 
-## Algorithm
+This robot is an autonomous robot that uses sensor data from an android phone and a hoverboard for localization. Using the GPS coordinates of the waypoint it can travel to to it's destination while avoiding obstacles.
+
+
+
+## Sensor Fusion
 _____  
-To implement this project, we use ArUco markers, as it provides us the means to do lightweight accurate pose estimation. 
-This is necessary to enable the robot to detect and follow the user. 
+Localization is done using sensors from an android phone including an IMU (accelerometer, gyroscope, magnetometer), and a GPS sensor. Aditionally odometry data from the hoverboard itself is also used. The android app fuses the GPS signal and the odomoetry for accurate robot position estimation. And fuses GPS yaw with the IMU yaw for orientation.  
 
-simply, the camera will receive continues frames, and will send them to the ArUco detector code. Then, pose estimation
-and other calculations are done to determine the position and orientation of the user. This information is then interpreted 
-as [speed] and [steer] and will be sent to the motors controlling the wheels of the robot. 
+## Navigation
+_____  
+For navigation, The robot is given commands for linear velocity and angular velocity. A PD controller is implmented for angular velocity, which takes into account the current position and the last position for smoother turning. For linear velocity a function based on the natural exponential function is used such that the speed is faster if the robot is facing the waypoint and slower when turning.
 
-![Alt text](followercart_BlockDiagram.png)
+## Obstacle Avoidance
+_____  
+Obstacle avoidance was implemented using an Oak-D camera for depth estimation. By using the depth map from the oak-d and segmenting the frame into three sections and calculating the average intensity of each section, we were able to detect where the obstacle is. The robot turns away from obstacles with a speed propotional to the average intensity of the sections where the obstacle is. In other words, it turns faster the closer the obstacle is.
+![Alt text](Sections1.png)
+
+
 ## instructions
 These operation instructions are to be used by the user of AutoCart:
 <ol>
